@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://soap.saraf.com/EMS"
+	xmlns:tns="http://soap.saraf.com/EMS"
+	elementFormDefault="qualified">
+
+    <element name="GetEmployeeRequest" type="tns:GetEmployeeRequest"></element>
+
+	<complexType name="GetEmployeeRequest">
+		<sequence>
+			<element name="employeeId" type="int"></element>
+		</sequence>
+	</complexType>
+
+	<element name="GetEmployeeResponse"
+		type="tns:GetEmployeeResponse">
+	</element>
+
+	<complexType name="GetEmployeeResponse">
+		<sequence>
+			<element name="employeeId" type="int"></element>
+			<element name="employeeName" type="string"></element>
+			<element name="location" type="string"></element>
+			<element name="zipCode" type="int"></element>
+		</sequence>
+	</complexType>
+</schema>
